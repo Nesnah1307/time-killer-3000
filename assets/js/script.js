@@ -5,7 +5,6 @@
 
 var getExcuse = function (excuse) {
  
-
     var excuseApi = `https://excuser.herokuapp.com/v1/excuse`
 
     fetch(excuseApi).then(function (response){
@@ -19,25 +18,24 @@ var getExcuse = function (excuse) {
         }
     });
 
-   if (response.ok) {
-        response.json().then(function(data) {
-          displayIssues(data);
+//    if (response.ok) {
+//         response.json().then(function(data) {
+//           displayIssues(data);
       
-          // check if api has paginated issues
-          if (response.headers.get("Link")) {
-            console.log("repo has more than 30 issues");
-          }
-        });
-      }
+//           // check if api has paginated issues
+//           if (response.headers.get("Link")) {
+//             console.log("repo has more than 30 issues");
+//           }
+//         });
+//       }
 
 
 };
 getExcuse();
 
 
-var getJoke = function (excuse) {
+var getJoke = function (joke) {
  
-
     var jokeApi = `https://api.chucknorris.io/jokes/random`
 
     fetch(jokeApi).then(function (response){
@@ -51,17 +49,16 @@ var getJoke = function (excuse) {
         }
     });
 
-   if (response.ok) {
-        response.json().then(function(data) {
-          displayIssues(data);
+//    if (response.ok) {
+//         response.json().then(function(data) {
+//           displayIssues(data);
       
-          // check if api has paginated issues
-          if (response.headers.get("Link")) {
-            console.log("repo has more than 30 issues");
-          }
-        });
-      }
-
+//           // check if api has paginated issues
+//           if (response.headers.get("Link")) {
+//             console.log("repo has more than 30 issues");
+//           }
+//         });
+//       }
 
 };
 getJoke();
