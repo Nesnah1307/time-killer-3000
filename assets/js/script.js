@@ -17,7 +17,6 @@ var getExcuse = function (excuse) {
             alert('There was a problem with your request!')
         }
     });
-
 };
 getExcuse();
 
@@ -27,15 +26,9 @@ getExcuse();
 
 
 
-
-
-
-
-
-
 var getJoke = function (joke) {
  
-    var jokeApi = `https://api.chucknorris.io/jokes/random/?q=value`
+    var jokeApi = `https://api.chucknorris.io/jokes/random`
 
     fetch(jokeApi).then(function (response){
         if (response.ok) {
@@ -47,6 +40,16 @@ var getJoke = function (joke) {
             alert('There was a problem with your request!')
         }
     });
-
 };
 getJoke();
+
+
+
+
+const saveExcuse = () => {
+    localStorage.setItem("Excuses", );
+};
+
+const loadExcuse = () => {
+    localStorage.getItem("Excuses");
+};
