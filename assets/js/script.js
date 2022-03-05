@@ -10,14 +10,14 @@ var getExcuse = function (excuse) {
     fetch(excuseApi).then(function (response){
         if (response.ok) {
             response.json().then(function(data){
-                console.log(data);
+                // console.log(data);
+                displayExcuse(data);
             });
         }
         else {
             alert('There was a problem with your request!')
         }
     });
-
 };
 getExcuse();
 
@@ -27,26 +27,41 @@ getExcuse();
 
 
 
-
-
-
-
-
-
 var getJoke = function (joke) {
  
-    var jokeApi = `https://api.chucknorris.io/jokes/random/?q=value`
+    var jokeApi = `https://api.chucknorris.io/jokes/random`
 
     fetch(jokeApi).then(function (response){
         if (response.ok) {
             response.json().then(function(data){
-                console.log(data);
+                // console.log(data);
+                displayJoke(data);
             });
         }
         else {
             alert('There was a problem with your request!')
         }
     });
-
 };
 getJoke();
+
+const displayJoke = (data) => {
+    let joke = data.value;
+    console.log(joke);
+};
+
+const displayExcuse = (data) => {
+    let excuse = data[0].excuse
+    console.log(excuse);
+};
+
+
+
+
+const saveExcuse = () => {
+    localStorage.setItem("Excuses", );
+};
+
+const loadExcuse = () => {
+    localStorage.getItem("Excuses");
+};
