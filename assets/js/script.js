@@ -18,25 +18,24 @@ var getExcuse = function (excuse) {
         }
     });
 
-//    if (response.ok) {
-//         response.json().then(function(data) {
-//           displayIssues(data);
-      
-//           // check if api has paginated issues
-//           if (response.headers.get("Link")) {
-//             console.log("repo has more than 30 issues");
-//           }
-//         });
-//       }
-
-
 };
 getExcuse();
 
 
+
+
+
+
+
+
+
+
+
+
+
 var getJoke = function (joke) {
  
-    var jokeApi = `https://api.chucknorris.io/jokes/random`
+    var jokeApi = `https://api.chucknorris.io/jokes/random/?q=value`
 
     fetch(jokeApi).then(function (response){
         if (response.ok) {
@@ -48,17 +47,6 @@ var getJoke = function (joke) {
             alert('There was a problem with your request!')
         }
     });
-
-//    if (response.ok) {
-//         response.json().then(function(data) {
-//           displayIssues(data);
-      
-//           // check if api has paginated issues
-//           if (response.headers.get("Link")) {
-//             console.log("repo has more than 30 issues");
-//           }
-//         });
-//       }
 
 };
 getJoke();
