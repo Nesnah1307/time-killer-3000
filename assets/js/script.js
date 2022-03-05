@@ -10,7 +10,8 @@ var getExcuse = function (excuse) {
     fetch(excuseApi).then(function (response){
         if (response.ok) {
             response.json().then(function(data){
-                console.log(data);
+                // console.log(data);
+                displayExcuse(data);
             });
         }
         else {
@@ -33,7 +34,8 @@ var getJoke = function (joke) {
     fetch(jokeApi).then(function (response){
         if (response.ok) {
             response.json().then(function(data){
-                console.log(data);
+                // console.log(data);
+                displayJoke(data);
             });
         }
         else {
@@ -42,6 +44,16 @@ var getJoke = function (joke) {
     });
 };
 getJoke();
+
+const displayJoke = (data) => {
+    let joke = data.value;
+    console.log(joke);
+};
+
+const displayExcuse = (data) => {
+    let excuse = data[0].excuse
+    console.log(excuse);
+};
 
 
 
