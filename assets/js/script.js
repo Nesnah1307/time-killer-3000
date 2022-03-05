@@ -22,9 +22,20 @@ var getExcuse = function (excuse) {
 getExcuse();
 
 
+
+
+
+
+
+
+
+
+
+
+
 var getJoke = function (joke) {
  
-    var jokeApi = `https://api.chucknorris.io/jokes/random`
+    var jokeApi = `https://api.chucknorris.io/jokes/random/?q=value`
 
     fetch(jokeApi).then(function (response){
         if (response.ok) {
