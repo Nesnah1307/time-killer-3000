@@ -71,5 +71,5 @@ const loadExcuse = () => {
 
 
 excusesEl.addEventListener("click", getExcuse);
-chuckNorrisEl = document.querySelector("click", getJoke);
+chuckNorrisEl = addEventListener("click", getJoke);
 
