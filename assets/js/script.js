@@ -9,6 +9,7 @@ var excusesEl = document.querySelector("#btn2");
 
 
 
+
 var getExcuse = function (excuse) {
     
     var excuseApi = `https://excuser.herokuapp.com/v1/excuse`
@@ -64,20 +65,22 @@ const displayExcuse = (data) => {
     let excuseDisplayEl = document.getElementById('excuseDisplay');
     excuseDisplayEl.textContent = ''
     let excuse = data[0].excuse
-    excuseDisplayEl.append(excuse);
+    excuseDisplayEl.append(excuse);  
 };
 
 
 
 
 const saveExcuse = () => {
-    localStorage.setItem("Excuses", );
+    localStorage.setItem('Excuses', $('#excuseDisplay').find('div').val());
+    console.log('is connected');
 };
 
-const loadExcuse = () => {
-    localStorage.getItem("Excuses");
-};
+// const loadExcuse = () => {
+//     localStorage.getItem("Excuses");
+// };
 
 
 excusesEl.addEventListener("click", getExcuse);
+chuckNorrisEl.addEventListener("click", getJoke);
 chuckNorrisEl.addEventListener("click", getJoke);
