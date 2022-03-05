@@ -1,10 +1,11 @@
 // https://api.chucknorris.io/
 
 // https://excuser.herokuapp.com/
-
+var chuckNorrisEl = document.querySelector("#btn1");
+var excusesEl = document.querySelector("#btn2");
 
 var getExcuse = function (excuse) {
- 
+    
     var excuseApi = `https://excuser.herokuapp.com/v1/excuse`
 
     fetch(excuseApi).then(function (response){
@@ -20,6 +21,8 @@ var getExcuse = function (excuse) {
     });
 };
 getExcuse();
+
+
 
 
 
@@ -65,3 +68,8 @@ const saveExcuse = () => {
 const loadExcuse = () => {
     localStorage.getItem("Excuses");
 };
+
+
+excusesEl.addEventListener("click", getExcuse);
+chuckNorrisEl = document.querySelector("click", getJoke);
+
