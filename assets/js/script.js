@@ -4,6 +4,11 @@
 var chuckNorrisEl = document.querySelector("#btn1");
 var excusesEl = document.querySelector("#btn2");
 
+
+
+
+
+
 var getExcuse = function (excuse) {
     
     var excuseApi = `https://excuser.herokuapp.com/v1/excuse`
@@ -20,7 +25,7 @@ var getExcuse = function (excuse) {
         }
     });
 };
-getExcuse();
+
 
 
 
@@ -46,16 +51,20 @@ var getJoke = function (joke) {
         }
     });
 };
-getJoke();
+
 
 const displayJoke = (data) => {
+    let jokeDisplayEl = document.getElementById('jokeDisplay');
+    jokeDisplayEl.textContent = ''
     let joke = data.value;
-    console.log(joke);
+    jokeDisplayEl.append(joke);
 };
 
 const displayExcuse = (data) => {
+    let excuseDisplayEl = document.getElementById('excuseDisplay');
+    excuseDisplayEl.textContent = ''
     let excuse = data[0].excuse
-    console.log(excuse);
+    excuseDisplayEl.append(excuse);
 };
 
 
@@ -71,5 +80,5 @@ const loadExcuse = () => {
 
 
 excusesEl.addEventListener("click", getExcuse);
-chuckNorrisEl = document.querySelector("click", getJoke);
+chuckNorrisEl.addEventListener("click", getJoke);
 
