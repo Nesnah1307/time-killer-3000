@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="has-background-info">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,32 +10,36 @@
 </head>
 <body>
 <div class="card has-text-centered has-background-grey-dark card-content">
-    <h1 class="has-text-light title is-1 level-item has-text-centered card-header">Time Killer 3000</h1>
+    <h1 class="has-text-warning title is-1 level-item has-text-centered card-header">Time Killer 3000</h1>
 
-        <p class="has-text-light level-item has-text-centered  mb-5">
+        <p class="has-text-warning level-item has-text-centered  m-6">
             Welcome to the Time Killer 3000! In need of a joke or and excuse from work? Then you have come to the right place. Click on the button and we’ll return an excuse or a joke! If you don’t like what you see then click again!
         </p>
     <!-- The click buttons section -->
     <div class="row is-flex-direction-row">
         <div class="columns is-2-mobile is-0-tablet is-3-desktop is-8-widescreen is-gapless is-1-fullhd  ">
             <div class="column level-item has-text-centered ">
-                <button class="button is-white ">
-                    Get a Chuck Norris Joke
-                </button>
-                <!-- Responses section -->
-                <div class="column has-text-light m-2">
+                <button class="button is-white is-rounded has-text-info">
                     Chuck Norris Joke
+                </button>
+
+                <!-- Responses section -->
+                <div class="container">
+                    <h2 class="is-size-4 is-underlined has-text-warning m-6">Chuck Norris Jokes</h2>
+                    <div id="jokeDisplay" class="column has-text-light m-2"></div>
                 </div>
             </div>
             
             <div class="column level-item has-text-centered">
-                <button class="button is-white">
+                <button class="button is-rounded is-white has-text-info">
                     Get an Excuse
                 </button>
                 <!-- Responses section -->
-                <div class="column has-text-light m-2">
-                    Your Excuse 
+                <div class="container">
+                    <h2 class="is-size-4 is-underlined has-text-warning m-6">Excuses</h2>
+                    <div id="excuseDisplay" class="column has-text-light m-2 "></div>
                 </div>
+                
             </div>
         </div>
     </div>
