@@ -83,4 +83,3 @@ const saveExcuse = () => {
 
 excusesEl.addEventListener("click", getExcuse);
 chuckNorrisEl.addEventListener("click", getJoke);
-chuckNorrisEl.addEventListener("click", getJoke);
