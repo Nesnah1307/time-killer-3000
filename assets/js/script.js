@@ -69,10 +69,9 @@ const loadExcuse = () => {
 };
 
 const getSaved = () => {
-    var pullData = localStorage.getItem('Excuses', $('#excuseDisplay').text());
     displayDataEl = document.getElementById("displayData");
     displayDataEl.textContent = ""
-    let display = data[0].display
+    let display = localStorage.getItem('Excuses', $('#excuseDisplay').text());
     displayDataEl.append(display);
 }
 
@@ -81,4 +80,3 @@ excusesEl.addEventListener("click", getExcuse);
 chuckNorrisEl.addEventListener("click", getJoke);
 saveBtn.addEventListener("click", saveExcuse);
 getSavedItems.addEventListener("click", getSaved);
-loadExcuse();
