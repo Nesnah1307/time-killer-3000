@@ -5,6 +5,7 @@
 var chuckNorrisEl = document.querySelector("#btn1");
 var excusesEl = document.querySelector("#btn2");
 var saveBtn = document.querySelector('#btn3');
+var getSavedItems = document.querySelector("#btn4")
 
 // API fetch function for excuses
 var getExcuse = function (excuse) {
@@ -67,8 +68,17 @@ const loadExcuse = () => {
     localStorage.getItem('Excuses',$('#excuseDisplay').text());
 };
 
+const getSaved = () => {
+    var pullData = localStorage.getItem('Excuses', $('#excuseDisplay').text());
+    displayDataEl = document.getElementById("displayData");
+    displayDataEl.textContent = ""
+    let display = data[0].display
+    displayDataEl.append(display);
+}
+
 // Event Listeners
 excusesEl.addEventListener("click", getExcuse);
 chuckNorrisEl.addEventListener("click", getJoke);
 saveBtn.addEventListener("click", saveExcuse);
+getSavedItems.addEventListener("click", getSaved);
 loadExcuse();
