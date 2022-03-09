@@ -3,7 +3,7 @@
 // https://excuser.herokuapp.com/
 var chuckNorrisEl = document.querySelector("#btn1");
 var excusesEl = document.querySelector("#btn2");
-
+var saveBtn = document.querySelector('#btn3');
 
 
 
@@ -72,14 +72,15 @@ const displayExcuse = (data) => {
 
 
 const saveExcuse = () => {
-    localStorage.setItem('Excuses', $('#excuseDisplay').find('div').val());
+    localStorage.setItem('Excuses', $('#excuseDisplay').find('p').val());
     console.log('is connected');
 };
 
 // const loadExcuse = () => {
-//     localStorage.getItem("Excuses");
+//     localStorage.getItem('Excuses');
 // };
 
 
 excusesEl.addEventListener("click", getExcuse);
 chuckNorrisEl.addEventListener("click", getJoke);
+saveBtn.addEventListener("click", saveExcuse);
