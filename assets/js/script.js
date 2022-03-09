@@ -72,15 +72,15 @@ const displayExcuse = (data) => {
 
 
 const saveExcuse = () => {
-    localStorage.setItem('Excuses', $('#excuseDisplay').find('p').val());
-    console.log('is connected');
+    localStorage.setItem('Excuses', $('#excuseDisplay').text());
 };
 
-// const loadExcuse = () => {
-//     localStorage.getItem('Excuses');
-// };
+const loadExcuse = () => {
+    localStorage.getItem('Excuses',$('#excuseDisplay').text());
+};
 
 
 excusesEl.addEventListener("click", getExcuse);
 chuckNorrisEl.addEventListener("click", getJoke);
 saveBtn.addEventListener("click", saveExcuse);
+loadExcuse();
