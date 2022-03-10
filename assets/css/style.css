@@ -1,0 +1,17 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
+
+body, html{
+    display: flex;
+    height: 150%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(29, 28, 28);
+    margin: auto 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.card {
+    width: 50%;
+}
